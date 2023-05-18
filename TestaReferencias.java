@@ -3,7 +3,7 @@ public class TestaReferencias {
 
 	public static void main(String[] args) {
 		
-		ControleBinificacao controle = new ControleBinificacao();
+		ControleBonificacao controle = new ControleBonificacao();
 		
 		Gerente gerente = new Gerente();
 		gerente.setNome("Marcos");
@@ -11,17 +11,19 @@ public class TestaReferencias {
 		
 		controle.registra(gerente);
 		System.out.println(controle.getSoma());
-		
-		Funcionario funcionario = new Funcionario();
-		funcionario.setSalario(2000.0);
-		
-		controle.registra(funcionario);
-		System.out.println(controle.getSoma());
+	
 		
 		EditorDeVideo editorDeVideo = new EditorDeVideo();
 		editorDeVideo.setSalario(2500.0);
 		
 		controle.registra(editorDeVideo);
+		System.out.println(controle.getSoma());
+		
+		
+		Designer designer = new Designer();
+		designer.setSalario(2500.0);
+		
+		controle.registra(designer);
 		System.out.println(controle.getSoma());
 	}
 
